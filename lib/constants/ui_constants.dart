@@ -1,3 +1,6 @@
+import 'package:finale3/features/explore/view/explore_view.dart';
+import 'package:finale3/features/notifications/views/notification_view.dart';
+import 'package:finale3/features/tweet/widgets/tweet_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:finale3/theme/pallete.dart';
@@ -15,9 +18,9 @@ class UIConstants {
     );
   }
 
-  static List<Widget> bottomTabBarPages = [
-    Text('Feed Screen'),
-    Text('Seach Screen'),
-    Text('Notification Screen')
+  static const List<Widget> bottomTabBarPages = [
+    TweetList(),
+    ExploreView(),
+    NotificationView(),
   ];
 }

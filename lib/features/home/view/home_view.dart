@@ -1,4 +1,5 @@
 import 'package:finale3/constants/constants.dart';
+import 'package:finale3/features/home/widgets/side_drawer.dart';
 import 'package:finale3/features/tweet/views/create_tweet.dart';
 import 'package:finale3/theme/pallete.dart';
 import 'package:flutter/cupertino.dart';
@@ -29,7 +30,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar,
+      appBar: _page == 0 ? appBar : null,
       body: IndexedStack(
         index: _page,
         children: UIConstants.bottomTabBarPages,
@@ -37,6 +38,7 @@ class _HomeViewState extends State<HomeView> {
       floatingActionButton: FloatingActionButton(
         onPressed: onCreateTweet,
         child: const Icon (Icons.add, color: Pallete.whiteColor, size:28),),
+        drawer: const SideDrawer(),
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,
         onTap: OnPageChange,
