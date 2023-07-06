@@ -1,5 +1,4 @@
 import 'package:finale3/common/common.dart';
-import 'package:finale3/common/error.dart';
 import 'package:finale3/features/explore/controller/explore_controller.dart';
 import 'package:finale3/features/explore/widgets/search_tile.dart';
 import 'package:finale3/theme/pallete.dart';
