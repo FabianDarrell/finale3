@@ -42,7 +42,6 @@ class AuthController extends StateNotifier<bool> {
   })  : _authAPI = authAPI,
         _userAPI = userAPI,
         super(false);
-  // state = isLoading
 
   Future<model.Account?> currentUser() => _authAPI.currentUserAccount();
 

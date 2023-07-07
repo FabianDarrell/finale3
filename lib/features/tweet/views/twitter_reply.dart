@@ -51,7 +51,6 @@ class TwitterReplyScreen extends ConsumerWidget {
                             } else if (data.events.contains(
                               'databases.*.collections.${AppwriteConstants.tweetsCollection}.documents.*.update',
                             )) {
-                              // get id of original tweet
                               final startingPoint =
                                   data.events[0].lastIndexOf('documents.');
                               final endPoint =

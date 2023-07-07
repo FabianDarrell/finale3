@@ -115,8 +115,6 @@ class UserProfile extends ConsumerWidget {
     }, 
     body: ref.watch(getUserTweetsProvider(user.uid)).when(
                   data: (tweets) {
-                    // can make it realtime by copying code
-                    // from twitter_reply_view
                     return ListView.builder(
                       itemCount: tweets.length,
                       itemBuilder: (BuildContext context, int index) {
